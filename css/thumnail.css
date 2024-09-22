@@ -1,0 +1,144 @@
+/* Thumbnail */
+.thumbnail {
+    /* background-color: blue; */
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+    margin: 64px 0px 0px 0px;
+}
+
+/* thumbail-left */
+.thumbnail-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    row-gap: 16px;
+    /* background-color: yellow; */
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    width: 100%;
+}
+
+.main-img>img {
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+}
+
+.main-img > .active {
+    display: block;
+}
+
+.gallary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 21px;
+}
+
+.gallary>.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+
+}
+
+.gallary>.pic>img {
+    border-radius: 10px;
+    width: 60px;
+    padding: 2px;
+
+}
+
+.gallary>.pic>img:hover {
+    opacity: 0.4;
+}
+
+.gallary> .active {
+    border: 3px solid var(--Orange);
+}
+.gallary> .pic> .active {
+    opacity: 0.4;
+}
+
+/* --------------------------Light Box Syle Start Here-------------------- */
+
+.light-box-back {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.700);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.light-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 16px;
+    width: 300px;
+    height: 375x;
+    position: relative;
+}
+.previous {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    transform: translate(-50%, -100%);
+    cursor: pointer;
+}
+.next {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    transform: translate(50%, -100%);
+}
+
+.light-box-close {
+    fill: white;
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    fill: white;
+    cursor: pointer;
+}
+
+.light-box-close:hover {
+    fill: var(--Orange);
+}

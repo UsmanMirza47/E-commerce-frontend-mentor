@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- ---------------------------------
+  main css file
+  ------------------------------------- -->
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- media queires css file -->
+
+    <link rel="stylesheet" href="css/mediaQueires.css" />
+
+    <!-- thumbnail style sheet -->
+    <link rel="stylesheet" href="./css/thumnail.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- -----------------------------
+               NavBar
+     --------------------------------- -->
+
+      <nav>
+        <!-- --------------------
+          NavBar-Left-Section
+          -------------------------- -->
+
+        <div class="nav-left">
+          <!-- navbar-menu-btn for mobile 
+           that is hidden in desktop computer -->
+
+          <button class="desktop-hidden menu">
+            <img src="./images/icon-menu.svg" alt="" />
+          </button>
+
+          <!-- navbar logo image  -->
+
+          <img src="./images/logo.svg" alt="" />
+
+          <!-- navbar un-order list  -->
+
+          <ul class="mob-nav mob-hidden">
+            <!-- navbar close button for mobile
+             that is hidden in desktop computer -->
+
+            <li class="close desktop-hidden">
+              <img src="./images/icon-close.svg" alt="" />
+            </li>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <!-- ------------------------
+         Navbar-right-section
+         --------------------------- -->
+
+        <div class="nav-right">
+          <!--  -->
+
+          <span id="cart-btn-box">
+            <img id="nav-right-first" src="./images/icon-cart.svg" alt="" />
+            <span id="cart-btn-inner-box" class="hidden"></span>
+
+            <!-- Cart basket  -->
+            <div class="cart-pop-up hidden">
+              <h3>Cart</h3>
+              <p>Your cart is empty.</p>
+                <button class="checkout hidden">Checkout</button>
+  
+              <!-- cart-active-pop-up -->
+              <div class="pop-up-active empty">
+                <button class="checkout">Checkout</button>
+              </div>
+            </div>
+            <!-- cart basket Close -->
+
+          </span>
+
+
+          <img id="avatar" src="./images/image-avatar.png" alt="" />
+        </div>
+      </nav>
+
+      <!-- thumbnail -->
+      <section class="thumbnail">
+        <div class="thumbnail-left mob-hidden">
+          <!-- thumbnail main images -->
+          <div class="main-img">
+            <img
+              class="active"
+              id="thumbnail-image"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <img
+              id="thumbnail-image"
+              src="./images/image-product-2.jpg"
+              alt=""
+            />
+            <img
+              id="thumbnail-image"
+              src="./images/image-product-3.jpg"
+              alt=""
+            />
+            <img
+              id="thumbnail-image"
+              src="./images/image-product-4.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- gallay images -->
+          <div class="gallary mob-hidden">
+            <span class="pic active">
+              <img
+                class="active"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+                class="small-img"
+              />
+            </span>
+            <span class="pic">
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+                class="small-img"
+              />
+            </span>
+            <span class="pic">
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+                class="small-img"
+              />
+            </span>
+            <span class="pic">
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+                class="small-img"
+              />
+            </span>
+          </div>
+        </div>
+
+        <!-- light box start -->
+
+        <section class="light-box-back">
+          <div class="light-box">
+            <!-- light box main images -->
+
+            <div class="main-img">
+              <!-- close button in light box -->
+              <span class="light-box-close">
+                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+
+              <!-- Previous button in light box -->
+              <span class="previous" onclick="changeNumber(-1)">
+                <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11 1 3 9l8 8"
+                    stroke="#1D2026"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+
+              <!-- Next button in light box -->
+              <span class="next" onclick="changeNumber(1)"
+                ><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m2 1 8 8-8 8"
+                    stroke="#1D2026"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  /></svg
+              ></span>
+
+              <img
+                class="active"
+                id="thumbnail-image"
+                src="./images/image-product-1.jpg"
+                alt=""
+              />
+              <img
+                id="thumbnail-image"
+                src="./images/image-product-2.jpg"
+                alt=""
+              />
+              <img
+                id="thumbnail-image"
+                src="./images/image-product-3.jpg"
+                alt=""
+              />
+              <img
+                id="thumbnail-image"
+                src="./images/image-product-4.jpg"
+                alt=""
+              />
+            </div>
+
+            <!-- gallay images -->
+            <div class="gallary mob-hidden">
+              <span class="pic active">
+                <img
+                  class="active"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt=""
+                  class="small-img"
+                />
+              </span>
+              <span class="pic">
+                <img
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt=""
+                  class="small-img"
+                />
+              </span>
+              <span class="pic">
+                <img
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt=""
+                  class="small-img"
+                />
+              </span>
+              <span class="pic">
+                <img
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt=""
+                  class="small-img"
+                />
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- light box End -->
+
+        <!-- thumbnail-right -->
+        <div class="thumbnail-right">
+          <p>Sneaker Company</p>
+          <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="main-price">
+            <div id="price">
+              <span class="price-first">$125.00</span>
+              <span class="price-second">50%</span>
+            </div>
+            <p class="price-third">$250.00</p>
+          </div>
+          <div class="buttons">
+            <div class="btns">
+              <button id="btn-1" class="btn">
+                <img src="./images/icon-minus.svg" alt="" />
+              </button>
+              <div id="btn-2" class="btn">0</div>
+              <button id="btn-3" class="btn">
+                <img src="./images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+
+            <button class="cart">
+              <img src="./images/icon-cart.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- variables javaScript file -->
+    <!-- <script src="./js/variables.js"></script> -->
+
+    <!-- function of all javaScript file -->
+    <!-- <script src="./js/function.js"></script> -->
+
+    <!-- main javaScript file -->
+    <!-- <script src="js/script.js"></script> -->
+
+    <!-- thumbnaill and javaScript functionality -->
+    <script src="./js/thumbnail.js"></script>
+
+    <!-- thumbnaill right and javaScript functionality -->
+    <script src="./js/thumbnailRight.js"></script>
+
+    <!-- thumbnaill right and javaScript functionality -->
+    <script src="./js/cart.js"></script>
+  </body>
+</html>
